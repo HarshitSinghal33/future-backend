@@ -1,4 +1,4 @@
-import { ERROR_MESSAGES } from "../constants/Messages.js";
+import { ERROR_MESSAGES } from "../constants/messages.js";
 import { UserAuthModal } from "../models/profile.model.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
