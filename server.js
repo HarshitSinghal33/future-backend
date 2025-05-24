@@ -1,12 +1,12 @@
 import express from "express";
 import dotenv from "dotenv";
-import { connectDatabase } from "./database/database.js";
-import authRouter from "./routes/auth.route.js";
-import profileRouter from "./routes/profile.route.js";
-import tokenVerification from "./middleware/tokenVerification.js";
-import chatRouter from "./routes/chat.route.js";
+import { connectDatabase } from "./src/database/database.js";
+import authRouter from "./src/routes/auth.route.js";
+import profileRouter from "./src/routes/profile.route.js";
+import tokenVerification from "./src/middleware/tokenVerification.js";
+import chatRouter from "./src/routes/chat.route.js";
 import http from "http";
-import { initSocket } from "./socket.js";
+import { initSocket } from "./src/socket.js";
 const PORT = process.env.PORT || 3000; // 3000 for local fallback
 
 dotenv.config();
