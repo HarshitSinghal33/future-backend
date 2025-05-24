@@ -7,6 +7,7 @@ import tokenVerification from "./middleware/tokenVerification.js";
 import chatRouter from "./routes/chat.route.js";
 import http from "http";
 import { initSocket } from "./socket.js";
+const PORT = process.env.PORT || 3000; // 3000 for local fallback
 
 dotenv.config();
 
@@ -22,6 +23,6 @@ app.use("/api/auth", authRouter);
 app.use("/api/profile", tokenVerification, profileRouter);
 app.use("/api/chat", tokenVerification, chatRouter);
 
-server.listen(3000, () => {
+server.listen(PORT, () => {
   console.log("Server is running on http://localhost:3000");
 });
